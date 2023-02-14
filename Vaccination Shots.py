@@ -46,10 +46,10 @@ class PriorityQueue:
 pq = PriorityQueue()
 k = 0
 
-while (pq.size()<=5):
 
-    k += 1
-    while True:
+while True:
+    while (pq.size()<=5):
+        k += 1
         try:
             user = ""
             name = input("Enter the name of patient: ").capitalize()
