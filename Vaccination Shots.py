@@ -47,29 +47,30 @@ pq = PriorityQueue()
 k = 0
 
 while (pq.size()<=5):
-    k += 1
-    try:
-        name = input("Enter the name of patient: ").capitalize()
-        age = int(input("Enter his/her age: "))
-        status = input("Enter the his/her status: ")
-    except ValueError:
-        print("Invalid Input. Try Again! ")
 
-    else:
-        special = input("Are you Senior Citizen (SC), Persons with Disability (PWD) and Frontliner workers (FW) otherwise type NO : ").upper()
-        if special == "FW":
-            prio = "1"
-        elif special == "SC":
-            prio = "2"
-        elif special == "PWD":
-            prio = "3"
+    k += 1
+    while True:
+        try:
+            user = ""
+            name = input("Enter the name of patient: ").capitalize()
+            age = int(input("Enter his/her age: "))
+            status = input("Enter the his/her status: ")
+        except TypeError:
+            print("Invalid Input")
         else:
-            prio = "4"
-        info = dict(patientNo= k,name=name, age=age, status=status)
-        user = Builder(info,prio)
-        pq.insert(user)
-        pq.show()
-        print(pq.size())
+            special = input("Are you Senior Citizen (SC), Persons with Disability (PWD) and Frontliner workers (FW) otherwise type NO : ").upper()
+            if special == "FW":
+                prio = "1"
+            elif special == "SC":
+                prio = "2"
+            elif special == "PWD":
+                prio = "3"
+            else:
+                prio = "4"
+            user = Builder(dict(patientNo= k,name=name, age=age, status=status),prio)
+            pq.insert(user)
+            pq.show()
+            print(pq.size())
 
 #
 #
