@@ -1,3 +1,4 @@
+import tkinter as tk
 
 class Queue:
     def __init__(self):
@@ -40,3 +41,11 @@ class Stack:
 
     def size(self):
         return len(self.items)
+
+class StackQueueGUI:
+    def __init__(self, master):
+        self.master = master
+        master.title("Stack and Queue GUI")
+
+        self.stack = Stack()
+        self.queue = Queue()
