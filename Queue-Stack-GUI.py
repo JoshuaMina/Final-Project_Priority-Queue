@@ -79,3 +79,9 @@ class StackQueueGUI:
 
         self.queue_entry = tk.Entry(self.queue_frame)
         self.queue_entry.pack()
+
+        self.queue_enqueue_button = tk.Button(self.queue_frame, text="Enqueue", command=self.queue_enqueue)
+        self.queue_enqueue_button.pack(pady=5)
+
+        self.queue_dequeue_button = tk.Button(self.queue_frame, text="Dequeue", command=self.queue_dequeue)
+        self.queue_dequeue_button.pack()
