@@ -101,3 +101,5 @@ class StackQueueGUI:
     def queue_enqueue(self):
         item = self.queue_entry.get()
         self.queue.enqueue(item)
+        self.queue_listbox.insert(tk.END, item)
+        self.queue_entry.delete(0, tk.END)
