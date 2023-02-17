@@ -61,3 +61,9 @@ class StackQueueGUI:
 
         self.stack_entry = tk.Entry(self.stack_frame)
         self.stack_entry.pack()
+
+        self.stack_push_button = tk.Button(self.stack_frame, text="Push", command=self.stack_push)
+        self.stack_push_button.pack(pady=5)
+
+        self.stack_pop_button = tk.Button(self.stack_frame, text="Pop", command=self.stack_pop)
+        self.stack_pop_button.pack()
