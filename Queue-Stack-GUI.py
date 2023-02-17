@@ -55,3 +55,9 @@ class StackQueueGUI:
 
         self.stack_label = tk.Label(self.stack_frame, text="Stack")
         self.stack_label.pack()
+
+        self.stack_listbox = tk.Listbox(self.stack_frame, width=20, height=10)
+        self.stack_listbox.pack()
+
+        self.stack_entry = tk.Entry(self.stack_frame)
+        self.stack_entry.pack()
