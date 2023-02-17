@@ -88,3 +88,6 @@ class StackQueueGUI:
 
     def stack_push(self):
         item = self.stack_entry.get()
+        self.stack.push(item)
+        self.stack_listbox.insert(tk.END, item)
+        self.stack_entry.delete(0, tk.END)
