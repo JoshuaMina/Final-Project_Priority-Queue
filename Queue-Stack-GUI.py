@@ -95,3 +95,5 @@ class StackQueueGUI:
     def stack_pop(self):
         item = self.stack.pop()
         self.stack_listbox.delete(tk.END)
+        self.stack_listbox.insert(tk.END, self.stack.items)
+        self.stack_entry.delete(0, tk.END)
