@@ -85,3 +85,6 @@ class StackQueueGUI:
 
         self.queue_dequeue_button = tk.Button(self.queue_frame, text="Dequeue", command=self.queue_dequeue)
         self.queue_dequeue_button.pack()
+
+    def stack_push(self):
+        item = self.stack_entry.get()
