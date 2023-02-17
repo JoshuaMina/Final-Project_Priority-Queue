@@ -109,3 +109,7 @@ class StackQueueGUI:
         self.queue_listbox.delete(0)
         self.queue_listbox.insert(tk.END, self.queue.items)
         self.queue_entry.delete(0, tk.END)
+
+root = tk.Tk()
+app = StackQueueGUI(root)
+root.mainloop()
