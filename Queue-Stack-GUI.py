@@ -19,3 +19,10 @@ class Queue:
 
     def size(self):
         return len(self.items)
+
+class Stack:
+    def __init__(self):
+        self.items = []
+
+    def push(self, item):
+        self.items.append(item)
