@@ -67,3 +67,9 @@ class StackQueueGUI:
 
         self.stack_pop_button = tk.Button(self.stack_frame, text="Pop", command=self.stack_pop)
         self.stack_pop_button.pack()
+
+        self.queue_frame = tk.Frame(master)
+        self.queue_frame.pack(side=tk.RIGHT, padx=10, pady=10)
+
+        self.queue_label = tk.Label(self.queue_frame, text="Queue")
+        self.queue_label.pack()
